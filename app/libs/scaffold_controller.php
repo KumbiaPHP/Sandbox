@@ -16,7 +16,7 @@ class ScaffoldController extends AdminController
     /**
      * Resultados paginados
      */
-    public function index($page = 1)
+    public function index(int $page = 1)
     {
         $this->data = (new $this->model)->paginate("page: $page", 'order: id desc');
     }
@@ -45,7 +45,7 @@ class ScaffoldController extends AdminController
     /**
      * Edita un Registro
      */
-    public function editar($id)
+    public function editar(int $id)
     {
         View::select('crear');
 
@@ -68,9 +68,9 @@ class ScaffoldController extends AdminController
     /**
      * Borra un Registro
      */
-    public function borrar($id)
+    public function borrar(int $id)
     {
-        if (!(new $this->model)->delete((int) $id)) {
+        if (!(new $this->model)->delete($id)) {
             Flash::error('Falló Operación');
         }
         //enrutando al index para listar los articulos
@@ -80,8 +80,8 @@ class ScaffoldController extends AdminController
     /**
      * Ver un Registro
      */
-    public function ver($id)
+    public function ver(int $id)
     {
-        $this->data = (new $this->model)->find_first((int) $id);
+        $this->data = (new $this->model)->find_first($id);
     }
 }
