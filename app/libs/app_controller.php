@@ -17,6 +17,9 @@ require_once CORE_PATH . 'kumbia/controller.php';
 class AppController extends Controller
 {
 
+    // default page title
+    public $page_title = 'KumbiaPHP Sandbox with examples';
+    
     final protected function initialize()
     {
 
