@@ -14,6 +14,6 @@ class SocialController extends AppController
 
     public function sociable()
     {
-
+        //$this->page_title = 'Social Links partial - '.$this->page_title;
     }
 }
