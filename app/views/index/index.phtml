@@ -1,17 +1,34 @@
-    <div class="hero">
-		<h2>KumbiaPHP <?= constant('KUMBIA_VERSION') ?? kumbia_version() ?> está listo para usarse</h2>
-        <h3>Bienvenido a KumbiaPHP Framework</h3>
-        <p>El framework ya está listo para desarrollar aplicaciones web con PHP, rápida y fácilmente, sin tener que reinventar la rueda, y preocupándose por lo más importante, la lógica de su aplicación.</p>
-       <?= Html::link('pages/kumbia/status/', 'Ver Config', 'title="Ver configuración de la aplicación" class="btn btn-info"') ?>
+<header>
+<div class="row container-top">    
+    <div class="span10 page-header ">
+        <h1>KumbiaPHP Framework</h1>
+        <h2>Programar puede ser más fácil.</h2>
+        <p><small>Descarga KumbiaPHP y desarrolla aplicaciones web estables y rápidas.</small></p>
+        <h3><?= Html::link('#', 'Descargar KumbiaPHP 1.0', 'class="btn-large"')?></h3>
+		<!--<small><a href="#">Otras versiones</a> · <a href=#>Vagrant box</a></small>-->
+    </div>   
+</div>
+</header>
+<div class="row">
+    <div class="span4">
+        <h2>Rápido, ligero y flexible</h2>
+        <p>KumbiaPHP es un framework para aplicaciones web libre escrito en <abbr title="Programación Orientada a Objetos">POO</abbr> PHP5. Basado en prácticas de desarrollo como <abbr title="Don't Repeat Yourself - No te repitas">DRY</abbr> y <abbr title="Keep It Short and Simple | Manténgalo breve y simple">KISS</abbr>, para software comercial y educativo.</P>
+    <p>Fomenta la velocidad y eficiencia en la creación y mantenimiento de aplicaciones web. Reemplazando tareas de codificación repetitivas por poder, control y placer.</p>
+    <p><?= Html::link('caracteristicas/', 'Quiero saber más.')?></p>	
+        <?php //echo Html::img('rapido.png') ?> 
     </div>
-    <h2>Cómo empezar</h2>
-    <p>En nuestra <a href="http://wiki.kumbiaphp.com/">wiki</a> podrás encontrar información actualizada sobre el uso del framework,
-    si estas comenzando con <em>KumbiaPHP</em> deberías realizar  la
-    <strong><a href="http://wiki.kumbiaphp.com/Hola_Mundo_KumbiaPHP_Framework">Aplicación Hola Mundo</a></strong>.</p>
-    <p>También puede interesarte saber sobre:</p>
-	<ul>
-		<li><a href="http://wiki.kumbiaphp.com/V1.0_CRUD_en_KumbiaPHP_Framework">Creacion de CRUD(Create, Read, Update, Delete)</a></h3></li>
-		<li><a href="http://wiki.kumbiaphp.com/Como_Usar_los_Modelos_en_KumbiaPHP">Uso de modelos</a></li>
-		<li><a href="https://github.com/KumbiaPHP/Documentation/blob/master/es/active-record.md#configurando-conexi%C3%B3n-a-la-base-de-datos">Configurar conexiones a bases de datos</a></li>
-	</ul>
-	<p>Estos son sólo algunos ejemplos, puedes ver más en la <a href="http://wiki.kumbiaphp.com/Categor%C3%ADa:Tutoriales_KumbiaPHP" title="Tutoriales KumbiaPHP">sección de tutoriales de la wiki</a></p>    
+    <div class="span4">
+        <h2>Documentación en español</h2>
+        <p>Aprende y disfruta de KumbiaPHP con los múltiples tutoriales y documentación en español, que hay disponible a traves de la wiki y del <abbr title="Application Programming Interface - Interfaz de programación de aplicaciones">API</abbr>.</p>
+        <p>Aprende más con la <?= Html::link('aprender/', 'documentación en español')?>.</p>
+        <?php //echo Html::img('doc.png') ?> 
+    </div>
+    <div class="span4">
+        <h2>Colabora en GitHub</h2>
+        <p>Puedes descargar la última versión en desarrollo desde GITHub y disponer de las últimas correcciones, cambios y mejoras..</p>
+        <p><a href="https://github.com/KumbiaPHP/KumbiaPHP" ><?= Html::img('sociable/github-img.jpeg', 'KumbiaPHP en github', 'width=120 height=46') ?>KumbiaPHP en GitHub</a></p>
+    </div>
+</div>
+<section class="row contributors">
+    <?php View::partial('social/gitcontributors', '+1day')?> 
+</section>

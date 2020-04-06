@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html lang="es">
- <head>
-  <meta charset=<?= APP_CHARSET ?> >
-  <title>KumbiaPHP Framework</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <?php Tag::css('kumbia') ?>
-  <?= Html::includeCss() ?>
+<html lang="es" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="utf-8">
+    <title><?= $page_title ?></title>
+    <!--[if lt IE 9]> <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/html5shiv@latest/dist/html5shiv.min.js"</script> <![endif]-->
+	<link rel="stylesheet" href="/css/structure2.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <meta property="og:type" content="website">
+    <meta property="og:image" content="http://proto.kumbiaphp.com/img/logo250.png">
 </head>
 <body>
-<div class="container">
-  <header class="row">
-      <div class="col-8">
-        <?= Html::img('kumbiaphp.svg', 'KumbiaPHP logo') ?>
-      </div>
-      <div class="col-4 text-right">
-          App: <strong><?= Config::get('config.application.name') ?></strong> (<?= PRODUCTION ? 'Production' : 'Development' ?>)
-      </div>
-  </header>
-  <?php View::content() ?>
-  <?php View::partial('kumbia/footer') ?>
-</div>
+	<?php View::partial('main/topbar', null, array('menu' => $menu)) ?> 
+	<div id="content">
+            <?php View::content() ?> 
+	</div>
+<footer>
+    <div class="row">
+        <div class="span6">
+			<p>Web creada con KumbiaPHP</p>
+        </div>
+		<?php View::partial('social/sociable') ?> 
+    </div>
+    <p><?= 'Time: ', round((microtime(1) - $_SERVER['REQUEST_TIME_FLOAT']) * 1000, 4), ' ms.'; ?></p>
+</footer>
+<!-- <?= 'Time: ', round((microtime(1) - $_SERVER['REQUEST_TIME_FLOAT']) * 1000, 4), ' ms.'; ?> -->
+<!-- <script defer src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js"></script> -->
 </body>
 </html>
