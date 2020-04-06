@@ -39,7 +39,7 @@ const APP_CHARSET = 'UTF-8';
  * el contenido del directorio de cache de la aplicación para que se renueve
  * la metadata (/app/tmp/cache/*)
  */
-const PRODUCTION = false;
+const PRODUCTION = true;
 
 /*
  * Descomentar para mostrar los errores
