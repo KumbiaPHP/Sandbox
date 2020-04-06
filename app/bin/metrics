@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+PATH=./vendor/bin:../../vendor/bin:~/.config/composer/vendor/bin:~/.composer/vendor/bin:$PATH
+
+phpmetrics --report-html="./temp/metrics" --exclude="tests,temp,features" ../
+
+if [[ $? > 0 ]]; then
+   #do log_error;
+   echo
+   echo phpmetrics not installed. Install with:
+   echo composer global require phpmetrics/phpmetrics
+   echo
+   exit 1;
+fi
+
+echo
+echo Control+click to open:
+echo file://$PWD/temp/metrics/index.html
+echo
+# If you want open it in browser directly
+# xdg-open file://$PWD/temp/metrics/index.html
+# in Mac
+# open file://$PWD/temp/metrics/index.html
+
+# composer global require 'phpmetrics/phpmetrics'
