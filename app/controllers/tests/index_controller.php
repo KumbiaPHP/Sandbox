@@ -7,6 +7,6 @@ class IndexController extends AppController
     {
         View::select(null, null);
 
-        var_dump(Countries::all());
+        echo '<pre>', var_dump(Countries::all()), '</pre>';
     }
 }
