@@ -10,6 +10,11 @@ return [
         'username' => '',
         'password' => '',
     ],
+    // example Sqlite
+    'countries' => [
+        'dsn' => 'sqlite:'.APP_PATH.'temp/sqlite/countries.db',
+        'pdo' => 'On',
+    ],
 
 
     'development' => [

@@ -1,4 +1,8 @@
 
 vendor
+composer.lock
 public/index.php
-app/temp
+app/temp/cache/*
+!/app/temp/cache/empty
+app/temp/logs/*
+!/app/temp/logs/empty
