@@ -1,0 +1,103 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "f0cfaa9b5cdebadfa25323ea4524fe3f",
+    "packages": [
+        {
+            "name": "kumbia/activerecord",
+            "version": "0.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KumbiaPHP/ActiveRecord.git",
+                "reference": "0b595ee29134a1cd79f0df3b5b9a0fb5af1c963c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KumbiaPHP/ActiveRecord/zipball/0b595ee29134a1cd79f0df3b5b9a0fb5af1c963c",
+                "reference": "0b595ee29134a1cd79f0df3b5b9a0fb5af1c963c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "php": ">=7.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kumbia\\ActiveRecord\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Joan Miquel",
+                    "email": "joanhey@kumbiaphp.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Alberto Berrotan",
+                    "email": "ashrey@kumbiaphp.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Emilio",
+                    "email": "emiliorst@kumbiaphp.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Fast ActiveRecord",
+            "homepage": "https://github.com/KumbiaPHP/ActiveRecord",
+            "keywords": [
+                "activerecord",
+                "database",
+                "orm"
+            ],
+            "time": "2020-04-03T18:59:10+00:00"
+        },
+        {
+            "name": "kumbia/framework",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KumbiaPHP/KumbiaPHP.git",
+                "reference": "588f84a761c26e0b2593b1f3e37f8c10cbce7678"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KumbiaPHP/KumbiaPHP/zipball/588f84a761c26e0b2593b1f3e37f8c10cbce7678",
+                "reference": "588f84a761c26e0b2593b1f3e37f8c10cbce7678",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "mockery/mockery": ">=0.9",
+                "php": ">=5.4",
+                "phpunit/phpunit": ">=4.0"
+            },
+            "type": "project",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "The KumbiaPHP framework",
+            "homepage": "https://kumbiaphp.com",
+            "time": "2019-02-16T14:39:33+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
