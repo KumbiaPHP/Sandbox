@@ -1,4 +1,5 @@
 <?php
+
 /**
 /**
  * KumbiaPHP web & app Framework
@@ -20,7 +21,8 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 }
 //ob_start();
 // Versión de KumbiaPHP
-function kumbia_version() {
+function kumbia_version()
+{
     return '1.0';
 }
 require_once 'KumbiaTestTrait.php';
@@ -35,7 +37,7 @@ defined('CORE_PATH') || define('CORE_PATH', 'vendor/kumbia/framework/core/');
 defined('APP_PATH') || define('APP_PATH', 'app/');
 defined('PUBLIC_PATH') || define('PUBLIC_PATH', 'http://127.0.0.1/');
 
-require_once CORE_PATH.'kumbia/autoload.php';
+require_once CORE_PATH . 'kumbia/autoload.php';
 require_once 'vendor/autoload.php';
 
 require CORE_PATH . 'kumbia/config.php';
