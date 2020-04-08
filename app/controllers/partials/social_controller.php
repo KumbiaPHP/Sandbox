@@ -7,6 +7,8 @@
 class SocialController extends AppController
 {
 
+    public $page_title = 'Social partials';
+    
     public function index()
     {
 
@@ -14,6 +16,6 @@ class SocialController extends AppController
 
     public function sociable()
     {
-        //$this->page_title = 'Social Links partial - '.$this->page_title;
+        $this->page_title = 'Social Links partial';
     }
 }

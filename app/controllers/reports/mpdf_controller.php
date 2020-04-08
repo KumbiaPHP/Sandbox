@@ -7,6 +7,8 @@
 class MpdfController extends AppController
 {
 
+    public $page_title = 'Export PDF with mPDF';
+    
     public function index()
     {
         
