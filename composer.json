@@ -1,5 +1,7 @@
 {
     "require": {
+        "php": ">=7.2.0",
+        "ext-pdo": "*",
         "kumbia/framework": "^1",
         "kumbia/activerecord": "^0.5",
         "mpdf/mpdf": "^8"
