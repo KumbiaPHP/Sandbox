@@ -1,4 +1,10 @@
 {
+    "homepage": "https://github.com/KumbiaPHP/ActiveRecord",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/KumbiaPHP/ActiveRecord/issues",
+        "slack": "https://slack.kumbiaphp.com"
+    },
     "require": {
         "php": ">=7.2.0",
         "ext-pdo": "*",
