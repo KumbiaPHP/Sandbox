@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/7.1/phpunit.xsd"
+         bootstrap="app/tests/bootstrap.php"
+         forceCoversAnnotation="true"
+         beStrictAboutCoversAnnotation="false"
+         beStrictAboutOutputDuringTests="true"
+         beStrictAboutTodoAnnotatedTests="true"
+         verbose="true"
+         colors="true">
+    <testsuites>
+        <testsuite name="Application testsuite">
+            <directory suffix="Test.php">app/tests/</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <!-- <env name="metadata_table" value="test"/>
+        <env name="metadata_schema" value=""/> -->
+        <server name="SERVER_NAME" value="https://sandbox.kumbiahp.com"/>
+        <server name="REMOTE_ADDR" value="127.0.0.6"/>
+        <ini name="error_reporting" value="-1"/>
+    </php>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">.</directory>
+            <exclude>
+                <directory>app/tests</directory>
+                <directory>app/temp</directory>
+                <directory>vendor</directory>
+                <directory>app/config</directory>
+            </exclude>
+        </whitelist>
+        
+    </filter>
+    <!-- <logging>
+        <log type="coverage-text" target="php://stdout" showUncoveredFiles="true"/>
+    </logging> -->
+</phpunit>
