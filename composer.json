@@ -23,6 +23,9 @@
         "kumbia/activerecord": "^0.5",
         "mpdf/mpdf": "^8"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^8 || ^9"
+    },
     "config": {
         "optimize-autoloader": true,
         "sort-packages": true
