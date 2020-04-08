@@ -1,8 +1,8 @@
 {
-    "homepage": "https://github.com/KumbiaPHP/ActiveRecord",
+    "homepage": "https://sandbox.kumbiaphp.com",
     "license": "BSD-3-Clause",
     "support": {
-        "issues": "https://github.com/KumbiaPHP/ActiveRecord/issues",
+        "issues": "https://github.com/KumbiaPHP/Sandbox/issues",
         "slack": "https://slack.kumbiaphp.com"
     },
     "require": {
