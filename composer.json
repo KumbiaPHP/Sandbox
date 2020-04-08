@@ -10,6 +10,12 @@
         "issues": "https://github.com/KumbiaPHP/Sandbox/issues",
         "slack": "https://slack.kumbiaphp.com"
     },
+    "authors": [
+        {
+            "name": "Community",
+            "homepage": "https://github.com/KumbiaPHP/Sandbox/graphs/contributors"
+        }
+    ],
     "require": {
         "php": ">=7.2.0",
         "ext-pdo": "*",
