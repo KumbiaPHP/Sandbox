@@ -1,24 +1,24 @@
-<?php if (count($data) < 1) : ?>
-    <h2>No hay ningún registro</h2>
+<?php if (!count($data)) : ?>
+    <h2>No hay ningún registro</h2> 
 <?php else : ?>
     <table class="report">
         <thead>
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Birthdate</th>
-        </tr>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Birthdate</th>
+            </tr>
         </thead>
         <tbody>
-        <?php foreach ($data as $item) : ?>
-            <tr>
-                <td><?= $item->first_name ?></td>
-                <td><?= $item->last_name ?></td>                
-                <td><?= $item->email ?></td>
-                <td><?= $item->birthdate ?></td>
-            </tr>
-        <?php endforeach ?>
+            <?php foreach ($data as $item) : ?>
+                <tr>
+                    <td><?= $item->first_name ?></td>
+                    <td><?= $item->last_name ?></td>
+                    <td><?= $item->email ?></td>
+                    <td><?= $item->birthdate ?></td>
+                </tr>
+            <?php endforeach ?>
         </tbody>
     </table>
-<?php endif ?>
+<?php endif ?> 
