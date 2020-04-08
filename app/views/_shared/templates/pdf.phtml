@@ -4,20 +4,35 @@ use Mpdf\Mpdf;
 use Mpdf\HTMLParserMode;
 use Mpdf\Output\Destination;
 
+// Nombre de fichero por defecto
+if (! isset($fileName)) {
+    $fileName = "Reporte-de-$controller_name";
+}
+
+// Título por defecto
+if (! isset($title)) {
+    $title = "Reporte de $controller_name";
+}
+
+// CSS por defecto
+if (! isset($css)) {
+    $css = 'css/pdf.css';
+}
+
 //Activa el almacenamiento en búfer de la salida
 ob_start();
 
 ?>
 <html>
     <head>
-        <title></title><?= isset($title) ? $title : 'Report'; ?></title>
+        <title><?= $title ?></title>
     </head>
     <body>
         <htmlpageheader name="myHeader1">
-            <div class="title-header"><?= isset($title) ? $title : 'Report' ?></div>
+            <div class="title-header"><?= $title ?></div>
         </htmlpageheader>
 
-        <?php View::content(); ?>
+        <?php View::content() ?>
 
         <htmlpagefooter name="myFooter1">
             <table width="100%" class="table_footer">
@@ -37,16 +52,11 @@ ob_clean();
 $mpdf = new Mpdf(['tempDir' => APP_PATH . 'temp/mpdf', 'margin-top' => 30]);
 
 // Carga el CSS externo
-$stylesheet = file_get_contents('css/pdf.min.css');
+$stylesheet = file_get_contents($css);
 $mpdf->WriteHTML($stylesheet, HTMLParserMode::HEADER_CSS);
 
-$mpdf->margin_header =
 // Escribe el contenido HTML (Template + View):
 $mpdf->WriteHTML($html);
 
-// Título por defecto
-if (! isset($fileName)) {
-    $fileName = 'Report';
-}
 // Obliga la descarga del PDF
 $mpdf->Output("$fileName.pdf", Destination::DOWNLOAD);
