@@ -1,0 +1,42 @@
+@page {
+    background-color:#ffffff;
+    header: html_myHeader1;
+    footer: html_myFooter1;
+    margin-top: 20mm; /* <any of the usual CSS values for margins> */
+}
+
+body {
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #222;
+}
+
+.title-header {
+    display: block;
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold
+}
+
+.table-footer {
+    width: 100%;
+    border-top: 1px dotted grey;
+    vertical-align: bottom;
+    font-size: 8pt;
+    font-style: italic;
+}
+
+.report {
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.report th,
+.report td {
+    padding: 5px;
+    text-align: left;
+    border: 1px solid #E1E1E1;
+}

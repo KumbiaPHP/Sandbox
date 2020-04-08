@@ -1,0 +1,62 @@
+<?php
+
+use Mpdf\Mpdf;
+use Mpdf\HTMLParserMode;
+use Mpdf\Output\Destination;
+
+// Nombre de fichero por defecto
+if (! isset($fileName)) {
+    $fileName = "Reporte-de-$controller_name";
+}
+
+// Título por defecto
+if (! isset($title)) {
+    $title = "Reporte de $controller_name";
+}
+
+// CSS por defecto
+if (! isset($css)) {
+    $css = 'css/pdf.css';
+}
+
+//Activa el almacenamiento en búfer de la salida
+ob_start();
+
+?>
+<html>
+    <head>
+        <title><?= $title ?></title>
+    </head>
+    <body>
+        <htmlpageheader name="myHeader1">
+            <div class="title-header"><?= $title ?></div>
+        </htmlpageheader>
+
+        <?php View::content() ?>
+
+        <htmlpagefooter name="myFooter1">
+            <table width="100%" class="table_footer">
+                <tr>
+                    <td width="50%">{DATE d/m/Y}</td>
+                    <td width="50%" style="text-align: right; ">{PAGENO}/{nbpg}</td>
+                </tr>
+            </table>
+        </htmlpagefooter>
+    </body>
+</html>
+<?php
+$html = ob_get_clean();
+ob_clean();
+
+// Crea una instancia de la clase y le pasa el directorio temporal
+$mpdf = new Mpdf(['tempDir' => APP_PATH . 'temp/mpdf', 'margin-top' => 30]);
+
+// Carga el CSS externo
+$stylesheet = file_get_contents($css);
+$mpdf->WriteHTML($stylesheet, HTMLParserMode::HEADER_CSS);
+
+// Escribe el contenido HTML (Template + View):
+$mpdf->WriteHTML($html);
+
+// Obliga la descarga del PDF
+$mpdf->Output("$fileName.pdf", Destination::DOWNLOAD);

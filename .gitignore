@@ -8,6 +8,7 @@
 !/app/temp/cache/README.md
 /app/temp/logs/*
 !/app/temp/logs/README.md
+/app/temp/mpdf/*
 
 # custom configs
 phpunit.xml
@@ -15,3 +16,7 @@ phpunit.xml
 # IDEs
 .vscode/
 .idea/
+/nbproject
+
+# Mac filesystem dust
+.DS_Store
