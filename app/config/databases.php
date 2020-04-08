@@ -4,17 +4,12 @@
  * Parámetros de conexión a la base de datos
  */
 return [
-    //Sqlite
+    // Main Sqlite
     'default' => [
-        'dsn' => 'sqlite::memory:',
-        'username' => '',
-        'password' => '',
-    ],
-    'sandbox' => [
         'dsn' => 'sqlite:'.APP_PATH.'temp/sqlite/sandbox.db',
         'pdo' => 'On',
-    ],
-    // example Sqlite
+    ],    
+    // Other Sqlite
     'countries' => [
         'dsn' => 'sqlite:'.APP_PATH.'temp/sqlite/countries.db',
         'pdo' => 'On',
