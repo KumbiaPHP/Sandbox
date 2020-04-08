@@ -8,7 +8,12 @@
 !/app/temp/cache/README.md
 /app/temp/logs/*
 !/app/temp/logs/README.md
+/app/temp/mpdf/*
 
 # IDEs
 .vscode/
 .idea/
+/nbproject
+
+# Mac filesystem dust
+.DS_Store
