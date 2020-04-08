@@ -1,7 +1,8 @@
 <div id="social">
 	<p>¡Compártelo!</p>
-	<?php $url = 'https://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-    $titulo = View::getVar('page_title'); //Necesita el título de página ?>
-    <a class="social facebook" rel="nofollow noopener noreferrer" href="https://www.facebook.com/share.php?u=<?=$url?>&amp;t=<?=urlencode($titulo)?>" title="Compártelo en Facebook" target="_blank"></a>
-	<a class="social twitter" rel="nofollow noopener noreferrer" href="https://twitter.com/intent/tweet?text=<?=urlencode($titulo)?>&amp;url=<?=$url?>&amp;via=KumbiaPHP" title="Compártelo en Twitter" target="_blank"></a>
-</div>
+	<?php //$url = 'https://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+	$url = 'https://'.$_SERVER['SERVER_NAME'].Router::get('route');
+	$titulo = View::getVar('page_title'); //Necesita el título de página 
+	?>
+	<a class="social facebook" rel="nofollow noopener noreferrer" href="https://www.facebook.com/share.php?u=<?= $url ?>&amp;t=<?= urlencode($titulo) ?>" title="Compártelo en Facebook" target="_blank"></a>
+	<a class="social twitter" rel="nofollow noopener noreferrer" href="https://twitter.com/intent/tweet?text=<?= urlencode($titulo) ?>&amp;url=<?= $url ?>&amp;via=KumbiaPHP" title="Compártelo en Twitter" target="_blank"></a>
