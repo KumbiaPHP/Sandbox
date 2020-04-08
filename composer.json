@@ -5,5 +5,15 @@
         "kumbia/framework": "^1",
         "kumbia/activerecord": "^0.5",
         "mpdf/mpdf": "^8"
-    }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "funding": [
+        {
+            "type": "Open Collective",
+            "url": "https://opencollective.com/kumbiaphp"
+        }
+    ]
 }
