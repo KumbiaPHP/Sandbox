@@ -1,4 +1,9 @@
 {
+    "description": "KumbiaPHP sandbox with examples",
+    "keywords": [
+        "KumbiaPHP",
+        "examples"
+    ],
     "homepage": "https://sandbox.kumbiaphp.com",
     "license": "BSD-3-Clause",
     "support": {
