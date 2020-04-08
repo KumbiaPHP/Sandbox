@@ -10,6 +10,9 @@
 !/app/temp/logs/README.md
 /app/temp/mpdf/*
 
+# custom configs
+phpunit.xml
+
 # IDEs
 .vscode/
 .idea/
