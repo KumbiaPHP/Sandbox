@@ -4,7 +4,7 @@
  * Parámetros de conexión a la base de datos
  */
 return [
-    // Main Sqlite
+    // Used by default convention in new Active Record    
     'default' => [
         'dsn' => 'sqlite:'.APP_PATH.'temp/sqlite/sandbox.db',
         'pdo' => 'On',
