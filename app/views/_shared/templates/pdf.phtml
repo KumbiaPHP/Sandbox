@@ -1,0 +1,52 @@
+<?php
+
+use Mpdf\Mpdf;
+use Mpdf\HTMLParserMode;
+use Mpdf\Output\Destination;
+
+//Activa el almacenamiento en búfer de la salida
+ob_start();
+
+?>
+<html>
+    <head>
+        <title></title><?= isset($title) ? $title : 'Report'; ?></title>
+    </head>
+    <body>
+        <htmlpageheader name="myHeader1">
+            <div class="title-header"><?= isset($title) ? $title : 'Report' ?></div>
+        </htmlpageheader>
+
+        <?php View::content(); ?>
+
+        <htmlpagefooter name="myFooter1">
+            <table width="100%" class="table_footer">
+                <tr>
+                    <td width="50%">{DATE d/m/Y}</td>
+                    <td width="50%" style="text-align: right; ">{PAGENO}/{nbpg}</td>
+                </tr>
+            </table>
+        </htmlpagefooter>
+    </body>
+</html>
+<?php
+$html = ob_get_clean();
+ob_clean();
+
+// Crea una instancia de la clase y le pasa el directorio temporal
+$mpdf = new Mpdf(['tempDir' => APP_PATH . 'temp/mpdf', 'margin-top' => 30]);
+
+// Carga el CSS externo
+$stylesheet = file_get_contents('css/pdf.min.css');
+$mpdf->WriteHTML($stylesheet, HTMLParserMode::HEADER_CSS);
+
+$mpdf->margin_header =
+// Escribe el contenido HTML (Template + View):
+$mpdf->WriteHTML($html);
+
+// Título por defecto
+if (! isset($fileName)) {
+    $fileName = 'Report';
+}
+// Obliga la descarga del PDF
+$mpdf->Output("$fileName.pdf", Destination::DOWNLOAD);
