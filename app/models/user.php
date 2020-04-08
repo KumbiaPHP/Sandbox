@@ -5,5 +5,5 @@
  */
 class User extends \Kumbia\ActiveRecord\LiteRecord
 {
-    static protected $database = 'sandbox';
+    
 }
