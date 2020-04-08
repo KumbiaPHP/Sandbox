@@ -9,6 +9,9 @@
 /app/temp/logs/*
 !/app/temp/logs/README.md
 
+# custom configs
+phpunit.xml
+
 # IDEs
 .vscode/
 .idea/
