@@ -19,6 +19,11 @@ if (! isset($css)) {
     $css = 'css/pdf.css';
 }
 
+// Destino
+if (! isset($destination)) {
+    $destination = Destination::INLINE;
+}
+
 //Activa el almacenamiento en búfer de la salida
 ob_start();
 
@@ -58,5 +63,5 @@ $mpdf->WriteHTML($stylesheet, HTMLParserMode::HEADER_CSS);
 // Escribe el contenido HTML (Template + View):
 $mpdf->WriteHTML($html);
 
-// Obliga la descarga del PDF
-$mpdf->Output("$fileName.pdf", Destination::DOWNLOAD);
+// Genera el PDF, ya sea para su descarga o visualización en el navegador
+$mpdf->Output("$fileName.pdf", $destination);
