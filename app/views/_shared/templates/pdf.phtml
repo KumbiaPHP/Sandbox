@@ -20,9 +20,7 @@ if (! isset($css)) {
 }
 
 // Destino
-if (! isset($destination)) {
-    $destination = Destination::INLINE;
-}
+$destination = isset($download) && $download ? Destination::DOWNLOAD : Destination::INLINE;
 
 //Activa el almacenamiento en búfer de la salida
 ob_start();
@@ -40,7 +38,7 @@ ob_start();
         <?php View::content() ?>
 
         <htmlpagefooter name="myFooter1">
-            <table width="100%" class="table_footer">
+            <table width="100%" class="table_footer">                
                 <tr>
                     <td width="50%">{DATE d/m/Y}</td>
                     <td width="50%" style="text-align: right; ">{PAGENO}/{nbpg}</td>
