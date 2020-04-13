@@ -9,6 +9,7 @@
 /app/temp/logs/*
 !/app/temp/logs/README.md
 /app/temp/mpdf/*
+/app/temp/psalm
 
 # custom configs
 phpunit.xml
