@@ -15,6 +15,10 @@ h1, h2, h3 {
   font-weight: bold;
 }
 
+h1 {
+  font-size: 2em;
+}
+
 h2 {
   font-size: 1.8em;
   margin: .83em 0;
@@ -75,7 +79,8 @@ header {
 
 .container-top {
   text-align: center;
-  padding: 3em;
+  margin-bottom: 2em;
+  padding-top: .5em;
 }
 
 .container-top h1, .container-top h2 {
@@ -83,8 +88,8 @@ header {
     font-weight: bold;
 }
 
-.container-top h2 {
-    font-size: 1.5em;
+.page-header {
+  padding: 3em;
 }
 
 .page-header h1 {
@@ -93,6 +98,10 @@ header {
 
 .page-header h2 {
   font-weight: 400;
+}
+
+.page-header p {
+  margin: .6rem;
 }
 
 .content > header {
