@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title><?= $page_title ?></title>
     <!--[if lt IE 9]> <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/html5shiv@latest/dist/html5shiv.min.js"</script> <![endif]-->
-	<link rel="stylesheet" href="/css/structure2.min.css">
+	<link rel="stylesheet" href="/css/main.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:title" content="Sandbox with KumbiaPHP examples">
     <meta property="og:description" content="Offering examples to learn to use KumbiaPHP.">
@@ -15,19 +15,20 @@
 </head>
 <body>
 	<?php View::partial('main/topbar', null, array('menu' => $menu)) ?> 
-	<div id="content">
+	<main role="main" class="content">
             <?php View::content() ?> 
-	</div>
+	</main>
 <footer>
+    <div class="container">
     <div class="row">
-        <div class="span6">
+        <div class="six columns">
 			<p>Web creada con KumbiaPHP</p>
         </div>
-        <div class="span6">
+        <div class="six columns">
 		    <?php View::partial('social/sociable') ?> 
         </div>
     <p><?= 'Time: ', round((microtime(1) - $_SERVER['REQUEST_TIME_FLOAT']) * 1000, 4), ' ms.'; ?></p>
-    </div>
+    </div></div>
 </footer>
 <!-- <?= 'Time: ', round((microtime(1) - $_SERVER['REQUEST_TIME_FLOAT']) * 1000, 4), ' ms.'; ?> -->
 <!-- <script defer src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js"></script> -->
