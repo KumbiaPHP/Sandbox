@@ -2,15 +2,16 @@
     <h2>No hay ningún registro</h2> 
 <?php else : ?>
     <table class="report">
+    <caption class="caption"><?= $title ?></caption>
         <thead>
             <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Birthdate</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Birthdate</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody> 
             <?php foreach ($data as $item) : ?>
                 <tr>
                     <td><?= $item->first_name ?></td>
