@@ -2,7 +2,7 @@
     background-color:#ffffff;
     header: html_myHeader1;
     footer: html_myFooter1;
-    margin-top: 20mm; /* <any of the usual CSS values for margins> */
+    margin: 25mm; /* <any of the usual CSS values for margins> */
 }
 
 body {
@@ -14,10 +14,7 @@ body {
 }
 
 .title-header {
-    display: block;
-    font-size: 2em;
-    text-align: center;
-    font-weight: bold
+    /* Add css */
 }
 
 .table-footer {
@@ -30,8 +27,12 @@ body {
 
 .report {
     border-collapse: collapse;
-    margin-bottom: 15px;
     width: 100%;
+}
+
+.caption {    
+    font-size: 2em;
+    font-weight: bold;
 }
 
 .report th,
