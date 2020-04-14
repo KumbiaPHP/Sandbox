@@ -1,22 +1,24 @@
 <header>
+    <div class="container">
     <div class="row container-top">
-        <div class="span10 page-header ">
-            <h1>KumbiaPHP Framework Sandbox Examples</h1>
+        <div class="page-header ">
+            <h1>KumbiaPHP Framework Examples</h1>
             <h2>Programar puede ser más fácil.</h2>
             <p><small>Descarga KumbiaPHP y desarrolla aplicaciones web estables y rápidas.</small></p>
             <h3><a class="btn-large" href="https://github.com/KumbiaPHP/KumbiaPHP/archive/v1.0.0.zip">Descargar KumbiaPHP 1.0</a></h3>
             <!--<small><a href="#">Otras versiones</a> · <a href=#>Vagrant box</a></small>-->
         </div>
-    </div>
+    </div></div>
 </header>
+<section class="container">
 <div class="row">
-    <div class="span4">
+    <div class="four columns">
         <h2>Export</h2>
         <ul>
             <li><a href="/export/pdf">Export to PDF, includes header and footer</a></li>
         </ul>
     </div>
-    <div class="span4">
+    <div class="four columns">
         <h2>Partials</h2>
         <h3>Social</h3>
         <ul>
@@ -27,13 +29,14 @@
             <li>Google Maps</li>
         </ul>
     </div>
-    <div class="span4">
+    <div class="four columns">
         <h2>Colabora en GitHub añadiendo ejemplos</h2>
         <p>Sube tus ejemplos, para no repetirnos y ser más productivos.</p>
         <p>Crea un fork en Github:</p>
         <p><a href="https://github.com/KumbiaPHP/Sandbox"><?= Html::img('sociable/github-img.jpeg', 'KumbiaPHP en github', 'width=120 height=46') ?>KumbiaPHP Sandbox en GitHub</a></p>
     </div>
 </div>
-<section class="row contributors">
+</section>
+<section class="container contributors">
     <?php View::partial('social/gitcontributors', '+1day') ?>
 </section>

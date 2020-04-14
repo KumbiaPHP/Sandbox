@@ -1,0 +1,366 @@
+/* Changes in Skeleton and general */
+.container {
+  max-width: 1260px;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue","Calibri Light",Roboto,sans-serif;
+}
+
+h1, h2, h3 {
+  color: #444;
+  line-height: 1.2em;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: .83em 0;
+}
+
+a, a:visited {
+  color: #00a1cb;
+  text-decoration: none;
+}
+
+a img {
+  border: 0;
+}
+
+embed, img, object {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  padding-bottom: 2em;
+}
+
+footer {
+  padding: 1em;
+  border-top: 1px solid #f7e6dc;
+  background: #f8f3f0;
+}
+
+footer p {
+  color: #fff;
+}
+
+dl, menu, ol, ul {
+    margin: 1em 0
+}
+
+dd {
+    margin: 0 0 0 40px
+}
+
+menu, ol, ul {
+  padding: 0 0 0 40px;
+}
+
+/* Sandbox app */
+
+header {
+  background: #dff4ff;
+  color: #00486b;
+  padding: 1em;
+  border-bottom: 1px solid #c8dde7;
+}
+
+.container-top {
+  text-align: center;
+  padding: 3em;
+}
+
+.container-top h1, .container-top h2 {
+    color: #00324b;
+    font-weight: bold;
+}
+
+.container-top h2 {
+    font-size: 1.5em;
+}
+
+.page-header h1 {
+  font-size: 3em;
+}
+
+.page-header h2 {
+  font-weight: 400;
+}
+
+.content > header {
+  margin-bottom: 3em;
+  background: radial-gradient(
+        ellipse at center center,
+        #eaeff2 0px,
+        rgba(212, 221, 228, 0.5) 50%
+      )
+      repeat scroll 0% 0%,
+      transparent
+      linear-gradient(to bottom, #cae1f4 0px, rgba(125, 185, 232, 0) 100%)
+      repeat scroll 0% 0%;
+}
+
+h1 + p {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+h1 + h2 {
+  margin: 0;
+}
+
+header p {
+  color: #28507c;
+}
+
+nav {
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  /*border-bottom: 3px solid#00A1CB;
+  height: 50px; 
+  box-shadow: 0 0 20px #000;
+  z-index: 100;*/
+}
+
+.menu {
+  float: right;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+.menu li {
+  display: inline-block;
+  list-style: none outside none;
+  margin: 0 0.5px;
+  padding: 0;
+  position: relative;
+}
+
+.menu a {
+  display: block;
+  color: #444;
+  line-height: 56px;
+  margin: 0;
+  padding: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  /* text-shadow:0 1px 0 rgba(0,0,0,.5) */
+}
+
+.menu a.sel,
+.menu a:hover,
+.menu a:active,
+.menu a:focus,
+.index .index,
+.blog .blog,
+.caracteristicas .caracteristicas,
+.escaparate .escaparate,
+.aprender .aprender,
+.comunidad .comunidad,
+.descargas .descargas {
+    background: #00a1cb;
+    color: white
+}
+
+.logo {
+  padding: 7px 1em 0;
+  height: 56px;
+}
+
+.btn,
+.btn-large {
+  display: inline-block;
+  padding: 18px 40px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  line-height: 1;
+  background-color: #f26629;
+  background-image: -moz-linear-gradient(top, #f95e0c 0%, #e53003 100%);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #f95e0c),
+    color-stop(100%, #e53003)
+  );
+  background-image: -webkit-linear-gradient(top, #f95e0c 0%, #e53003 100%);
+  background-image: -o-linear-gradient(top, #f95e0c 0%, #e53003 100%);
+  background-image: -ms-linear-gradient(top, #f95e0c 0%, #e53003 100%);
+  background-image: linear-gradient(to bottom, #f95e0c 0%, #e53003 100%);
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover,
+.btn-large:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #ff7234;
+  background-image: -moz-linear-gradient(top, #f95e0c 0%, #cd2a02 100%);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #f95e0c),
+    color-stop(100%, #cd2a02)
+  );
+  background-image: -webkit-linear-gradient(top, #f95e0c 0%, #cd2a02 100%);
+  background-image: -o-linear-gradient(top, #f95e0c 0%, #cd2a02 100%);
+  background-image: -ms-linear-gradient(top, #f95e0c 0%, #cd2a02 100%);
+  background-image: linear-gradient(to bottom, #f95e0c 0%, #cd2a02 100%);
+}
+
+/********************************* ICONOS *******************/
+
+.social {
+  background-image: url(../img/sociable/social.png);
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  margin-right: 2px;
+}
+
+.facebook {
+  background-position: -64px 0;
+}
+
+.twitter {
+  background-position: -32px 0;
+}
+
+.google {
+  background-position: -96px 0;
+}
+
+/********************************* Responsive *******************/
+
+@media (max-width: 830px) {
+  nav {
+    position: static;
+    height: auto;
+  }
+  footer .stButton {
+    margin-bottom: 5px;
+  }
+  .container {
+    margin-top: 0;
+  }
+  .page-header {
+    width: 90%;
+    margin: 0 10px;
+  }
+}
+
+@media (min-width: 980px) {
+  body {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 550px) {
+}
+
+/* Formatea los mensajes Flash::xxx() de KumbiaPHP */
+
+.flash {
+  border: 1px solid;
+  margin: 1px 0;
+  min-height: 32px;
+  padding: 3px 10px 3px 50px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.error {
+  color: #d8000c;
+  background-color: #ffbaba;
+  background-image: url(../img/default/error.png);
+}
+
+.info {
+  color: #00529b;
+  background-color: #bde5f8;
+  background-image: url(../img/default/info.png);
+}
+
+.valid {
+  color: #4f8a10;
+  background-color: #dff2bf;
+  background-image: url(../img/default/valid.png);
+}
+
+.warning {
+  color: #9f6000;
+  background-color: #feefb3;
+  background-image: url(../img/default/warning.png);
+}
+
+.contributors a {
+  border: 4px solid transparent;
+  display: inline-block;
+}
+
+.contributors a:hover {
+  border-color: #01a1cb;
+}
+
+.contributors img {
+  display: block;
+}
+
+#off-canvas,
+nav label {
+  display: none;
+}
+
+nav label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+@media (max-width: 830px) {
+  .menu {
+    display: none;
+    float: none;
+    font-size: 2em;
+    margin: 0 -10px 0 -20px;
+    border-bottom: 5px solid #c8dde7;
+  }
+  .menu li {
+    display: block;
+    border-top: 1px solid #ccc;
+    text-align: center;
+  }
+  nav label {
+    display: block;
+  }
+  #off-canvas:checked ~ .menu {
+    display: block;
+  }
+  .page-header {
+    padding: 0;
+  }
+}
+
+footer {
+  background: linear-gradient(90deg, #34658f 10%, #56b4d3 90%);
+}
