@@ -48,13 +48,16 @@ main {
 }
 
 footer {
-  padding: 1em;
-  border-top: 1px solid #f7e6dc;
-  background: #f8f3f0;
+  padding: 2em 0 1em;
+  background: #020c20;
 }
 
-footer p {
+footer, footer h3, footer a, footer a:visited {
   color: #fff;
+}
+
+footer a:hover, footer a:hover:visited {
+  color: #079;
 }
 
 dl, menu, ol, ul {
@@ -372,6 +375,7 @@ nav label {
   }
 }
 
-footer {
-  background: linear-gradient(90deg, #34658f 10%, #56b4d3 90%);
+.list {
+  list-style: none;
+  padding: 0;
 }
