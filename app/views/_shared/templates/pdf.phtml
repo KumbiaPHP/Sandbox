@@ -26,7 +26,8 @@ $destination = isset($download) && $download ? Destination::DOWNLOAD : Destinati
 ob_start();
 
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <title><?= $title ?></title>
@@ -37,16 +38,16 @@ ob_start();
         <div class="title-header">
             <img src="img/kumbiaphp.svg" alt="Logo KumbiaPHP">
             <br>Powered by
-        </div> 
+        </div>
     </htmlpageheader>
 
     <?php View::content() ?>
 
     <htmlpagefooter name="myFooter1">
-        <table width="100%" class="table_footer">
+        <table class="table-footer">
             <tr>
-                <td width="50%">{DATE d/m/Y}</td>
-                <td width="50%" style="text-align: right; ">{PAGENO}/{nbpg}</td>
+                <td>{DATE d/m/Y}</td>
+                <td style="text-align: right;">{PAGENO}/{nbpg}</td>
             </tr>
         </table>
     </htmlpagefooter>
