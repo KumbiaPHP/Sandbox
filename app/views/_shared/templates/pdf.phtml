@@ -1,7 +1,6 @@
 <?php
 
 use Mpdf\Mpdf;
-use Mpdf\Output\Destination;
 
 /* Defaults */
 
@@ -15,7 +14,7 @@ $title = $title ?? "Reporte de $controller_name";
 $css = $css ?? 'css/pdf.css';
 
 // Destination
-$destination = isset($download) && $download ? Destination::DOWNLOAD : Destination::INLINE;
+$destination = isset($download) && $download ? 'D' : 'I';
 
 //Activa el almacenamiento en búfer de la salida
 ob_start();
