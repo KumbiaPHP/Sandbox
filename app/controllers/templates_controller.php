@@ -2,6 +2,10 @@
 
 class TemplatesController extends AppController
 {
+    // allowed templates
+    
+    const ALLOW = ['csv', 'xml', 'json'];
+
     public function index()
     {
         $this->data = User::all();
@@ -9,6 +13,10 @@ class TemplatesController extends AppController
 
     public function get($template)
     {
+        if (!in_array($template, self::ALLOW)) {
+            throw new KumbiaException('');
+        }
+
         View::select(null, $template);
         $this->data = User::all();
     }
