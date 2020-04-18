@@ -4,11 +4,41 @@
         <p>Using KumbiaPHP templates</p>
     </div>
 </header>
-<div class="row">
-    <h2></h2>
-    <ul>
-        <li><a href="/templates/get/csv" target="_blank">CSV Template</a></li>
-        <li><a href="/templates/get/xml" target="_blank">XML Template</a></li>
-        <li><a href="/templates/get/json" target="_blank">JSON Template</a></li>
-    </ul>
+<div class="row container">
+    <div class="four columns">
+        <h2>KumbiaPHP Templates</h2>
+        <ul>
+            <li><a href="/templates/get/csv" target="_blank">CSV Template</a></li>
+            <li><a href="/templates/get/xml" target="_blank">XML Template</a></li>
+            <li><a href="/templates/get/json" target="_blank">JSON Template</a></li>
+        </ul>
+    </div>
+    <div class="eight columns">
+        <h2>Template by default: HTML</h2>
+        <?php if (!count($data)) : ?>
+            <h2>There are no records</h2>
+        <?php else : ?>
+            <table class="report">
+                <caption class="caption">User list</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Birthdate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($data as $item) : ?>
+                        <tr>
+                            <td><?= $item->first_name ?></td>
+                            <td><?= $item->last_name ?></td>
+                            <td><?= $item->email ?></td>
+                            <td><?= $item->birthdate ?></td>
+                        </tr>
+                    <?php endforeach ?>
+                </tbody>
+            </table>
+        <?php endif ?>
+    </div>
 </div>
