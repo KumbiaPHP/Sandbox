@@ -3,6 +3,7 @@
     header: html_myHeader1;
     footer: html_myFooter1;
     margin: 25mm; /* <any of the usual CSS values for margins> */
+    margin-top: 35mm;
 }
 
 body {
@@ -13,16 +14,24 @@ body {
     color: #222;
 }
 
-.title-header {
-    /* Add css */
+#page-header p {
+    margin-top: 0px;
 }
 
-.table-footer {
+#page-footer {
     width: 100%;
     border-top: 1px dotted grey;
-    vertical-align: bottom;
-    font-size: 8pt;
+    font-size: 0.9em;
     font-style: italic;
+}
+
+#printed-date, #page-number {
+    width: 50%; 
+    float: left;
+}
+
+#page-number {
+    text-align: right;
 }
 
 .report {
@@ -30,7 +39,7 @@ body {
     width: 100%;
 }
 
-.caption {    
+.caption {
     font-size: 2em;
     font-weight: bold;
 }

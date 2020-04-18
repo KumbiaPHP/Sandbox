@@ -26,29 +26,28 @@ $destination = isset($download) && $download ? Destination::DOWNLOAD : Destinati
 ob_start();
 
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <title><?= $title ?></title>
-</head>
+    <link rel="stylesheet" type="text/css" href="css/pdf.css">
 
 <body>
     <htmlpageheader name="myHeader1">
-        <div class="title-header">
-            <img src="img/kumbiaphp.svg" alt="Logo KumbiaPHP">
-            <br>Powered by
-        </div> 
+        <section id="page-header">
+            <img src="img/kumbiaphp.svg" alt="Logo KumbiaPHP"> 
+            <p>Powered by</p>
+        </section>
     </htmlpageheader>
 
     <?php View::content() ?>
 
     <htmlpagefooter name="myFooter1">
-        <table width="100%" class="table_footer">
-            <tr>
-                <td width="50%">{DATE d/m/Y}</td>
-                <td width="50%" style="text-align: right; ">{PAGENO}/{nbpg}</td>
-            </tr>
-        </table>
+        <section id="page-footer">
+            <div id="printed-date">{DATE d/m/Y}</div>
+            <div id="page-number">{PAGENO}/{nbpg}</div>
+        </section>
     </htmlpagefooter>
 </body>
 
