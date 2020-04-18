@@ -27,12 +27,15 @@ ob_start();
 
 <head>
     <title><?= $title ?></title>
-    <link rel="stylesheet" type="text/css" href="css/pdf.css">
+    <link rel="stylesheet" type="text/css" href="<?= $css ?>">
+    <meta name="author" content="KumbiaPHP framework">
+    <meta name="description" content="PDF output example with KumbiaPHP framework">
+    <meta name="keywords" content="kumbiaphp, php, pdf, mpdf, examples">
 
 <body>
     <htmlpageheader name="myHeader1">
         <section id="page-header">
-            <img src="img/kumbiaphp.svg" alt="Logo KumbiaPHP"> 
+            <a href="https://www.kumbiaphp.com"><img src="img/kumbiaphp.svg" alt="Logo KumbiaPHP"></a>
             <p>Powered by</p>
         </section>
     </htmlpageheader>
@@ -53,11 +56,14 @@ $html = ob_get_clean();
 ob_clean();
 
 // Crea una instancia de la clase y le pasa el directorio temporal
-$mpdf = new Mpdf(['tempDir' => APP_PATH . 'temp/mpdf']);
-
-// Carga el CSS externo
-$stylesheet = file_get_contents($css);
-$mpdf->WriteHTML($stylesheet, HTMLParserMode::HEADER_CSS);
+$mpdf = new Mpdf([
+    'tempDir' => APP_PATH . 'temp/mpdf',
+    'format' => 'A4',
+    'title2annots' => true,  // convert title in annotations
+    'mirrorMargins' => 0,    // mirror the left and right margin values on odd and even pages 
+    'exposeVersion' => false // security 
+    // more variables in https://mpdf.github.io/reference/mpdf-variables/overview.html
+]);
 
 // Escribe el contenido HTML (Template + View):
 $mpdf->WriteHTML($html);
