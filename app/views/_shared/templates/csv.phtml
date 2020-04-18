@@ -1,6 +1,6 @@
 <?php
 /* datos a formatear*/
-$data = is_array($data) ? $data : array($data);
+$data = (array) $data;
 /* delimitador entre campos */
 $delimiter = $delimiter ?? ',';
 
