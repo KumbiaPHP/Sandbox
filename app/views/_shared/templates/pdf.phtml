@@ -31,25 +31,23 @@ ob_start();
 
 <head>
     <title><?= $title ?></title>
-</head>
+    <link rel="stylesheet" type="text/css" href="css/pdf.css">
 
 <body>
     <htmlpageheader name="myHeader1">
-        <div class="title-header">
-            <img src="img/kumbiaphp.svg" alt="Logo KumbiaPHP">
-            <br>Powered by
-        </div>
+        <section id="page-header">
+            <img src="img/kumbiaphp.svg" alt="Logo KumbiaPHP"> 
+            <p>Powered by</p>
+        </section>
     </htmlpageheader>
 
     <?php View::content() ?>
 
     <htmlpagefooter name="myFooter1">
-        <table class="table-footer">
-            <tr>
-                <td>{DATE d/m/Y}</td>
-                <td style="text-align: right;">{PAGENO}/{nbpg}</td>
-            </tr>
-        </table>
+        <section id="page-footer">
+            <div id="printed-date">{DATE d/m/Y}</div>
+            <div id="page-number">{PAGENO}/{nbpg}</div>
+        </section>
     </htmlpagefooter>
 </body>
 

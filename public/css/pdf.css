@@ -14,16 +14,24 @@ body {
     color: #222;
 }
 
-.title-header {
-    display: block;
+#page-header p {
+    margin-top: 0px;
 }
 
-.table-footer {
+#page-footer {
     width: 100%;
     border-top: 1px dotted grey;
-    vertical-align: bottom;
     font-size: 0.9em;
     font-style: italic;
+}
+
+#printed-date, #page-number {
+    width: 50%; 
+    float: left;
+}
+
+#page-number {
+    text-align: right;
 }
 
 .report {
@@ -31,7 +39,7 @@ body {
     width: 100%;
 }
 
-.caption {    
+.caption {
     font-size: 2em;
     font-weight: bold;
 }
