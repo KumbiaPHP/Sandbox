@@ -4,6 +4,7 @@ class TemplatesController extends AppController
 {
     public function index()
     {
+        $this->data = User::all();
     }
 
     public function get($template)
