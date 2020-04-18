@@ -2,7 +2,7 @@
 /* datos a formatear*/
 $data = is_array($data) ? $data : array($data);
 /* delimitador entre campos */
-$delimiter = $delimiter ?: ',';
+$delimiter = $delimiter ?? ',';
 
 /*mime type para el contenido*/
 header("Content-type: text/csv");
