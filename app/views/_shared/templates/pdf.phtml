@@ -4,22 +4,18 @@ use Mpdf\Mpdf;
 use Mpdf\HTMLParserMode;
 use Mpdf\Output\Destination;
 
-// Nombre de fichero por defecto
-if (!isset($fileName)) {
-    $fileName = "Reporte-de-$controller_name";
-}
+/* Defaults */
 
-// Título por defecto
-if (!isset($title)) {
-    $title = "Reporte de $controller_name";
-}
+// fileName
+$fileName = $filename ?? "Reporte-de-$controller_name";
 
-// CSS por defecto
-if (!isset($css)) {
-    $css = 'css/pdf.min.css';
-}
+// Title
+$title = $title ?? "Reporte de $controller_name";
 
-// Destino
+// CSS
+$css = $css ?? 'css/pdf.css';
+
+// Destination
 $destination = isset($download) && $download ? Destination::DOWNLOAD : Destination::INLINE;
 
 //Activa el almacenamiento en búfer de la salida
