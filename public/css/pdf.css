@@ -1,21 +1,22 @@
 @page {
-    background-color:#ffffff;
+    background-color:#fff;
     header: html_myHeader1;
     footer: html_myFooter1;
-    margin: 25mm; /* <any of the usual CSS values for margins> */
+    margin-left: 25mm; /* <any of the usual CSS values for margins> */
     margin-top: 35mm;
+    margin-right: 10mm;
 }
 
 body {
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-size: 1em;
     line-height: 1.6;
     font-weight: 400;
     color: #222;
 }
 
 #page-header p {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 #page-footer {
@@ -48,5 +49,5 @@ body {
 .report td {
     padding: 5px;
     text-align: left;
-    border: 1px solid #E1E1E1;
+    border: 1px solid #eee;
 }
