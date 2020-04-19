@@ -1,4 +1,4 @@
-![KumbiaPHP logo](https://rawgit.com/kumbiaphp/kumbiaphp/master/default/public/img/kumbiaphp.svg)
+![KumbiaPHP logo](https://raw.githubusercontent.com/KumbiaPHP/KumbiaPHP/master/default/public/img/kumbiaphp.svg?sanitize=true)
 
 # Sandbox
 KumbiaPHP sandbox with examples.
