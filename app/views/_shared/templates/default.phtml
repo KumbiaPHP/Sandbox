@@ -23,9 +23,11 @@
     <div class="row">
         <div class="six columns">
             <h3>Conecta con nosotros</h3>
-            <p>Slack: <a href='https://slack.kumbiaphp.com' title="Chat donde podrás encontrar ayuda a problemas que tengas, hacer comentarios, proponer ideas, reportar bugs, socializar temas relacionados y disfrutar de KumbiaPHP.">
+            <p>Slack: <a href='https://slack.kumbiaphp.com' rel="me noopener noreferrer" target="_blank" title="Chat donde podrás encontrar ayuda a problemas que tengas, hacer comentarios, proponer ideas, reportar bugs, socializar temas relacionados y disfrutar de KumbiaPHP.">
             <img src="https://slack.kumbiaphp.com/badge.svg" alt="KumbiaPHP en Slack"></a></p>
-            <p>Grupo en Google | Facebook | Twitter</p>
+            <p><a href="https://groups.google.com/group/kumbia/" rel="me" title="Grupo de Google de KumbiaPHP Framework">Grupo en Google</a> | 
+            <a href="https://www.facebook.com/kumbia.fw" rel="me noopener noreferrer" target="_blank">Facebook</a> |
+            <a href="https://twitter.com/KumbiaPHP" rel="me noopener noreferrer" target="_blank">Twitter</a></p>
         </div>
         <div class="three columns">
             <h3>Ejemplos</h3>
@@ -37,15 +39,11 @@
                 <li><a href="https://kumbiaphp.com/blog/" rel="me">Blog</a></li>
                 <li><a href="https://github.com/KumbiaPHP/KumbiaPHP/" rel="me">Github</a></li>
                 <li><a href="https://github.com/KumbiaPHP/Documentation/tree/master/es" rel="me">Manual</a></li>
-                <li><a href="https://groups.google.com/group/kumbia/" rel="me" title="Grupo de Google de KumbiaPHP Framework">Grupo en Google</a></li>
-                <li><a href="https://www.facebook.com/kumbia.fw" rel="me noopener noreferrer" target="_blank">Facebook</a></li>
-                <li><a href="https://twitter.com/KumbiaPHP" rel="me noopener noreferrer" target="_blank">Twitter</a></li>
             </ul> 
         </section>
-    <p><?= 'KumbiaPHP v',KUMBIA_VERSION,' Time: ', round((microtime(1) - $_SERVER['REQUEST_TIME_FLOAT']) * 1000, 4), ' ms.'; ?></p>
+    <p><?= 'KumbiaPHP v',KUMBIA_VERSION,' - Time: ', round((microtime(1) - $_SERVER['REQUEST_TIME_FLOAT']) * 1000, 4), ' ms.'; ?></p>
     </div></div>
 </footer>
-<!-- <?= 'Time: ', round((microtime(1) - $_SERVER['REQUEST_TIME_FLOAT']) * 1000, 4), ' ms.'; ?> -->
 <!-- <script defer src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js"></script> -->
 </body>
 </html>
