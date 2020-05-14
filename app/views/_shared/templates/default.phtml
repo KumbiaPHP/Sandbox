@@ -15,16 +15,20 @@
 </head>
 <body>
 	<?php View::partial('main/topbar', null, array('menu' => $menu)) ?> 
-	<main role="main" class="content">
+	<main class="content">
             <?php View::content() ?> 
 	</main>
 <footer>
     <div class="container">
     <div class="row">
         <div class="six columns">
-			<p>Web creada con KumbiaPHP</p>
+            <h3>Conecta con nosotros</h3>
+            <p>Slack: <a href='http://slack.kumbiaphp.com' title="Chat donde podrás encontrar ayuda a problemas que tengas, hacer comentarios, proponer ideas, reportar bugs, socializar temas relacionados y disfrutar de KumbiaPHP.">
+            <img src="http://slack.kumbiaphp.com/badge.svg" alt="KumbiaPHP en Slack"></a></p>
+            <p>Grupo en Google | Facebook | Twitter</p>
         </div>
         <div class="three columns">
+            <h3>Ejemplos</h3>
 		    <?php View::partial('social/sociable') ?> 
         </div>
         <section class="three columns">
@@ -33,12 +37,12 @@
                 <li><a href="https://www.kumbiaphp.com/blog/" rel="me">Blog</a></li>
                 <li><a href="https://github.com/KumbiaPHP/KumbiaPHP/" rel="me">Github</a></li>
                 <li><a href="https://github.com/KumbiaPHP/Documentation/tree/master/es" rel="me">Manual</a></li>
-                <li><a href="http://groups.google.com/group/kumbia/" rel="me" title="Grupo de Google de KumbiaPHP Framework">Grupo en Google</a></li>
+                <li><a href="https://groups.google.com/group/kumbia/" rel="me" title="Grupo de Google de KumbiaPHP Framework">Grupo en Google</a></li>
                 <li><a href="https://www.facebook.com/kumbia.fw" rel="me noopener noreferrer" target="_blank">Facebook</a></li>
                 <li><a href="https://twitter.com/KumbiaPHP" rel="me noopener noreferrer" target="_blank">Twitter</a></li>
             </ul> 
         </section>
-    <p><?= 'Time: ', round((microtime(1) - $_SERVER['REQUEST_TIME_FLOAT']) * 1000, 4), ' ms.'; ?></p>
+    <p><?= 'KumbiaPHP v',KUMBIA_VERSION,' Time: ', round((microtime(1) - $_SERVER['REQUEST_TIME_FLOAT']) * 1000, 4), ' ms.'; ?></p>
     </div></div>
 </footer>
 <!-- <?= 'Time: ', round((microtime(1) - $_SERVER['REQUEST_TIME_FLOAT']) * 1000, 4), ' ms.'; ?> -->
