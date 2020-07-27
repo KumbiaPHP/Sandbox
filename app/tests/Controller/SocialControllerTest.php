@@ -17,7 +17,7 @@
 use PHPUnit\Framework\TestCase;
 
 /**
- * PagesControllerTest class
+ * SocialControllerTest class
  */
 class SocialControllerTest extends TestCase
 {

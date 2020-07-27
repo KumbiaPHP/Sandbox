@@ -21,9 +21,11 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 }
 //ob_start();
 // Versión de KumbiaPHP
+const KUMBIA_VERSION = '1.1.3';
+
 function kumbia_version()
 {
-    return '1.0';
+    return KUMBIA_VERSION;
 }
 require_once 'KumbiaTestTrait.php';
 
