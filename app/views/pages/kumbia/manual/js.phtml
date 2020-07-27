@@ -1,0 +1,141 @@
+<header>
+    <div class="row container-top">
+        <h1>Javascript</h1>
+        <p>Using jquery.kumbiaphp.js</p>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="three columns">
+            <h2>a.js-confirm</h2>
+            <a class="js-confirm" data-msg="<?= _('Are you sure?') ?>" href=""><?= _('Confirmation link') ?></a>
+        </div>
+        <div class="nine columns">
+            <pre class="language-php">
+                <code class="language-php"><?= h('<a class="js-confirm" data-msg="<?= _(\'Are you sure?\') ?>" href=""><?= _(\'Confirmation link\') ?></a>') ?></code>
+            </pre>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="three columns">
+            <h2>a.js-remote</h2>
+            <a class="js-remote" data-to="load-content-remote" href="/pages/kumbia/manual/sociable"><?= _('Remote link') ?></a>
+            <div id="load-content-remote"></div>
+        </div>
+        <div class="nine columns">
+            <pre class="language-php">
+                <code class="language-php"><?= h('<a class="js-remote" data-to="load-content-remote" href="/pages/kumbia/manual/sociable"><?= _(\'Remote link\')?></a>
+<div id="load-content-remote"></div>') ?></code>
+            </pre>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="three columns">
+            <h2>a.js-remote-confirm</h2>
+            <a class="js-remote-confirm" data-to="load-content-remote-2" href="/pages/kumbia/manual/sociable"><?= _('Remote link with confirmation') ?></a>
+            <div id="load-content-remote-2"></div>
+        </div>
+        <div class="nine columns">
+            <pre class="language-php">
+                <code class="language-php"><?= h('<a class="js-remote-confirm" data-to="load-content-remote-2" data-msg="<?= _(\'Are you sure?\') ?>" href="/pages/kumbia/manual/sociable"><?= _(\'Remote link with confirmation\') ?></a>
+<div id="load-content-remote-2"></div>') ?></code>
+            </pre>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="three columns">
+            <h2>form.js-remote</h2>
+            <form action="/pages/kumbia/manual/sociable" class="js-remote" data-to="load-content-remote-3" method="post">
+                <button type="submit"><?= _('Ajax form') ?></button>
+            </form>
+            <div id="load-content-remote-3"></div>
+        </div>
+        <div class="nine columns">
+            <pre class="language-php">
+                <code class="language-php"><?= h('<form action="/pages/kumbia/manual/sociable" class="js-remote" data-to="load-content-remote-3" method="post">
+    <button type="submit"><?= _(\'Ajax form\') ?></button>
+</form>
+<div id="load-content-remote-3"></div>') ?></code>
+            </pre>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="three columns">
+            <h2>a.js-show</h2>
+            <a class="js-show" data-to="green-container" href=""><?=_('Show green container')?></a>
+            <div id="green-container" style="width: 200px; height: 100px; margin: 20px 0px 0px; background: green; display: none;"></div>
+        </div>
+        <div class="nine columns">
+            <pre class="language-php">
+                <code class="language-php"><?= h('<a class="js-show" data-to="green-container" href=""><?=_(\'Show green container\')?></a>
+<div id="green-container" style="width: 200px; height: 100px; margin: 20px 0px 0px; background: green; display: none;"></div>') ?></code>
+            </pre>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="three columns">
+            <h2>a.js-hide</h2>
+            <a class="js-hide" data-to="blue-container" href=""><?=_('Hide blue container')?></a>
+            <div id="blue-container" style="width: 200px; height: 100px; margin: 20px 0px 0px; background: blue;"></div>
+        </div>
+        <div class="nine columns">
+            <pre class="language-php">
+                <code class="language-php"><?= h('<a class="js-hide" data-to="blue-container" href=""><?=_(\'Hide blue container\')?></a>
+<div id="blue-container" style="width: 200px; height: 100px; margin: 20px 0px 0px; background: blue;"></div>') ?></code>
+            </pre>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="three columns">
+            <h2>a.js-toggle</h2>
+            <a class="js-toggle" data-to="red-container" href=""><?=_('Toggle red container')?></a>
+            <div id="red-container" style="width: 200px; height: 100px; margin: 20px 0px 0px; background: red; display: none;"></div>
+        </div>
+        <div class="nine columns">
+            <pre class="language-php">
+                <code class="language-php"><?= h('<a class="js-toggle" data-to="red-container" href=""><?=_(\'Toggle red container\')?></a>
+<div id="red-container" style="width: 200px; height: 100px; margin: 20px 0px 0px; background: red; display: none;"></div>') ?></code>
+            </pre>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="three columns">
+            <h2>a.js-fade-in</h2>
+            <a class="js-fade-in" data-to="yellow-container" href=""><?=_('Fade-in yellow container')?></a>
+            <div id="yellow-container" style="width: 200px; height: 100px; margin: 20px 0px 0px; background: yellow; display: none;"></div>
+        </div>
+        <div class="nine columns">
+            <pre class="language-php">
+                <code class="language-php"><?= h('<a class="js-fade-in" data-to="yellow-container" href=""><?=_(\'Fade-in yellow container\')?></a>
+<div id="yellow-container" style="width: 200px; height: 100px; margin: 20px 0px 0px; background: yellow; display: none;"></div>') ?></code>
+            </pre>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="three columns">
+            <h2>a.js-fade-out</h2>
+            <a class="js-fade-out" data-to="black-container" href=""><?=_('Fade-out black container')?></a>
+            <div id="black-container" style="width: 200px; height: 100px; margin: 20px 0px 0px; background: black;"></div>
+        </div>
+        <div class="nine columns">
+            <pre class="language-php">
+                <code class="language-php"><?= h('<a class="js-fade-out" data-to="black-container" href=""><?=_(\'Fade-out black container\')?></a>
+<div id="black-container" style="width: 200px; height: 100px; margin: 20px 0px 0px; background: black;"></div>') ?></code>
+            </pre>
+        </div>
+    </div>
+</div>
+
+<?= Tag::js('jquery/jquery.min') ?>
+<?= Tag::js('jquery/jquery.kumbiaphp') ?>
+<?= Tag::js('prism') ?>
+<?php Css::add('prism-coy') ?>
