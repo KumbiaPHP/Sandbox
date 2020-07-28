@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Controller para el manejo de páginas estáticas, aunque
  * se puede utilizar como cualquier otro controller haciendo uso
@@ -32,7 +33,7 @@ class PagesController extends AppController
     {
         // Si es AJAX enviar solo el view
         if (Input::isAjax()) {
-          View::template(null);
+            View::template(null);
         }
     }
 
