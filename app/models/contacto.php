@@ -18,7 +18,7 @@ class Contacto
         $cabecera .= "From: ". $config["from_name"] ." <" .$config["from_email"]. ">\r\n";
 
         // Definimos el cuerpo del mensaje
-        $mensaje .= "<br>Nombre: ". $aDatos["nombre"];
+        $mensaje  = "<br>Nombre: ". $aDatos["nombre"];
         $mensaje .= "<br>Correo : ".$aDatos["email"];
         $mensaje .= "<br>Mensaje : ".nl2br($aDatos["mensaje"]);
 
