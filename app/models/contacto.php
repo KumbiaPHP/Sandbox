@@ -23,10 +23,6 @@ class Contacto
         $mensaje .= "<br>Mensaje : ".nl2br($aDatos["mensaje"]);
 
         // Enviamos el correo
-        if (mail($correo,$asunto,$mensaje,$cabecera)) {
-            return 1;
-        } else {
-            return 2;
-        }
+        return mail($correo,$asunto,$mensaje,$cabecera);
     }
 }
