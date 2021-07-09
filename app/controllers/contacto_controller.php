@@ -16,10 +16,9 @@ class ContactoController extends AppController
     public function index()
     {
         if (Input::hasPost('contacto')) {
-            $aDatos = Input::post('contacto');
-            $respuesta = (new Contacto)->sendEmail($aDatos);
+            $enviado = (new Contacto)->sendEmail(Input::post('contacto'));
 
-            if ($respuesta) {
+            if ($enviado) {
                 Flash::valid('Mensaje enviado correctamente');
                 return;
             }
