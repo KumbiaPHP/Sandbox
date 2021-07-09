@@ -13,7 +13,7 @@ class ContactoController extends AppController
         }
     }
 
-    public function contacto()
+    public function index()
     {
         if (Input::hasPost('contacto')) {
             $aDatos = Input::post('contacto');
