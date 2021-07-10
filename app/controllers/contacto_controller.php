@@ -16,14 +16,14 @@ class ContactoController extends AppController
     public function index()
     {
         if (Input::hasPost('contacto')) {
-            $enviado = (new Contacto)->sendEmail(Input::post('contacto'));
+            $enviado = SendMail::send(Input::post('contacto'));
 
             if ($enviado) {
                 Flash::valid('Mensaje enviado correctamente');
                 return;
             }
 
-            Flash::error('Mensaje NO enviado. Vuelva a probarlo más tarde');
+            Flash::error('Mensaje NO enviado. Vuelva a probarlo más tarde.');
         }
     }
 }
