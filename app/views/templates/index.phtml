@@ -1,23 +1,22 @@
-<header>
-    <div class="row container-top">
+<header class="container-top">
         <h1>Templates</h1>
         <p>Using KumbiaPHP templates</p>
-    </div>
 </header>
 <div class="row container">
-    <div class="four columns">
+    <aside>
         <h2>KumbiaPHP Templates</h2>
         <ul>
             <li><a href="/templates/get/csv" target="_blank">CSV Template</a></li>
             <li><a href="/templates/get/xml" target="_blank">XML Template</a></li>
             <li><a href="/templates/get/json" target="_blank">JSON Template</a></li>
         </ul>
-    </div>
+    </aside>
     <div class="eight columns">
         <h2>Template by default: HTML</h2>
         <?php if (!count($data)) : ?>
             <h2>There are no records</h2>
         <?php else : ?>
+            <figure>
             <table class="report">
                 <caption class="caption">User list</caption>
                 <thead>
@@ -39,6 +38,7 @@
                     <?php endforeach ?>
                 </tbody>
             </table>
+            </figure>
         <?php endif ?>
     </div>
 </div>

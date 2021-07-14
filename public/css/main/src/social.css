@@ -1,0 +1,21 @@
+/********************************* ICONOS *******************/
+
+.social {
+  background-image: url(../img/sociable/social.png);
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  margin-right: 2px;
+}
+
+.facebook {
+  background-position: -64px 0;
+}
+
+.twitter {
+  background-position: -32px 0;
+}
+
+.google {
+  background-position: -96px 0;
+}

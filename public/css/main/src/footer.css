@@ -1,0 +1,21 @@
+@media (min-width: 768px) {
+  footer .grid {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+footer {
+  padding: 2em 0 1em;
+  background: #020c20;
+}
+
+footer,
+footer h3,
+footer a,
+footer a:visited {
+  color: #fff;
+}
+
+footer a:hover,
+footer a:hover:visited {
+  color: #079;
+}

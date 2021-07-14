@@ -1,8 +1,6 @@
-<header>
-    <div class="row container-top">
+<header class="container-top">
         <h1>Javascript</h1>
         <p>Using jquery.kumbiaphp.js</p>
-    </div>
 </header>
 
 <div class="container">
@@ -21,7 +19,7 @@
     <div class="row">
         <div class="three columns">
             <h2>a.js-remote</h2>
-            <a class="js-remote" data-to="load-content-remote" href="/pages/kumbia/manual/sociable"><?= _('Remote link') ?></a>
+            <a class="js-toggle js-remote" data-to="load-content-remote" href="/pages/kumbia/manual/sociable"><?= _('Remote link') ?></a>
             <div id="load-content-remote"></div>
         </div>
         <div class="nine columns">
@@ -135,6 +133,7 @@
     </div>
 </div>
 
-<?= Tag::js('jquery/jquery+kumbiaphp.min') ?>
+<?= Tag::js('jquery/jquery.min') ?>
+<?= Tag::js('jquery/jquery.kumbiaphp') ?>
 <?= Tag::js('prism') ?>
 <?php Css::add('prism-coy') ?>

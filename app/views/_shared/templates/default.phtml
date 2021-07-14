@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
     <meta charset="utf-8">
     <title><?= $page_title ?></title>
-    <!--[if lt IE 9]> <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/html5shiv@latest/dist/html5shiv.min.js"</script> <![endif]-->
     <link rel="stylesheet" href="/css/main.min.css">
+    <!-- <link rel="stylesheet" href="/css/main/import.css"> -->
     <?= Css::inc() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:title" content="Sandbox with KumbiaPHP examples">
@@ -17,12 +17,12 @@
 <body>
 	<?php View::partial('main/topbar', null, array('menu' => $menu)) ?> 
 	<main class="content">
-            <?php View::content() ?> 
+        <?php View::content() ?> 
 	</main>
 <footer>
     <div class="container">
-    <div class="row">
-        <div class="six columns">
+    <div class="grid">
+        <div>
             <h3>Conecta con nosotros</h3>
             <p>Slack: <a href='https://slack.kumbiaphp.com' rel="me noopener noreferrer" target="_blank" title="Chat donde podrás encontrar ayuda a problemas que tengas, hacer comentarios, proponer ideas, reportar bugs, socializar temas relacionados y disfrutar de KumbiaPHP.">
             <img src="https://slack.kumbiaphp.com/badge.svg" alt="KumbiaPHP en Slack"></a></p>
@@ -30,11 +30,11 @@
             <a href="https://www.facebook.com/kumbia.fw" rel="me noopener noreferrer" target="_blank">Facebook</a> |
             <a href="https://twitter.com/KumbiaPHP" rel="me noopener noreferrer" target="_blank">Twitter</a></p>
         </div>
-        <div class="three columns">
+        <div>
             <h3>Ejemplos</h3>
 		    <?php View::partial('social/sociable') ?> 
         </div>
-        <section class="three columns">
+        <section>
             <h3>KumbiaPHP</h3>
             <ul class="list">
                 <li><a href="https://kumbiaphp.com/blog/" rel="me">Blog</a></li>
@@ -42,8 +42,9 @@
                 <li><a href="https://github.com/KumbiaPHP/Documentation/tree/master/es" rel="me">Manual</a></li>
             </ul> 
         </section>
+    </div>
     <p><?= 'KumbiaPHP v',KUMBIA_VERSION,' - Time: ', round((microtime(1) - $_SERVER['REQUEST_TIME_FLOAT']) * 1000, 4), ' ms.'; ?></p>
-    </div></div>
+    </div>
 </footer>
 <!-- <script defer src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js"></script> -->
 </body>
