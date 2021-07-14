@@ -6,7 +6,7 @@
             <?= Form::text('contacto.nombre', 'placeholder="Tu nombre *" required') ?> 
         </label>
         <label>Email :
-            <?= Form::text('contacto.email', 'placeholder="Tu email *" required') ?> 
+            <?= Form::email('contacto.email', 'placeholder="Tu email *" required') ?> 
         </label>
         <?= Form::textarea('contacto.mensaje', 'rows=8 placeholder="Tu mensaje *" required') ?> 
         <div>
