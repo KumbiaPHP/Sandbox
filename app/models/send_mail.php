@@ -11,8 +11,12 @@ class SendMail
         return mail(
             $config['to'],      // Correo de destino
             $config['subject'], // Asunto
-            self::body($data['nombre'], $data['email'], $data['mensaje']),
-            $config['headers']
+            self::body(
+                $data['nombre'],
+                $data['email'],
+                $data['mensaje']
+            ),
+            $config['headers']  // Cabezeras
         );
     }
 
