@@ -1,19 +1,12 @@
-<h1>Formulario de contacto</h1>
-<form id="contactForm" action="/contacto" method="post" >
-    <div>
+<div class="container">
+    <?php View::content() ?> 
+    <h1>Formulario de contacto</h1>
+    <?= Form::open() ?> 
+        <label>Nombre: <?= Form::text('contacto.nombre', 'placeholder="Tu nombre *" required') ?></label>
+        <label>Email : <?= Form::text('contacto.email', 'placeholder="Tu email *" required') ?></label>
+        <?= Form::textarea('contacto.mensaje', 'placeholder="Tu mensaje *" required') ?> 
         <div>
-            <div>
-                Nombre: <input id="contacto_nombre" name="contacto[nombre]" type="text" placeholder="Tu nombre *" required="required" />
-            </div>
-            <div>
-                Email: <input id="contacto_email" name="contacto[email]" type="email" placeholder="Tu email *" required="required" />
-            </div>
-            <div >
-                <textarea id="contacto_mensaje" name="contacto[mensaje]" placeholder="Tu mensaje *" required="required"></textarea>
-            </div>
+            <?= Form::submit('Enviar mensaje') ?> 
         </div>
-    </div>
-    <div>
-        <button id="sendMessageButton" type="submit">Enviar mensaje</button>
-    </div>
-</form>
+    </form>
+</div>
