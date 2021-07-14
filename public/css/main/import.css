@@ -1,0 +1,17 @@
+/* 
+ONLY in development
+in production use main.min.css
+*/
+
+
+@import "src/pico.css";
+
+@import "src/app.css";
+
+@import "src/footer.css";
+
+@import "src/flash.css";
+
+@import "src/social.css";
+
+@import "src/git-contributors.css";

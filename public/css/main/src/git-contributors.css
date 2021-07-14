@@ -1,0 +1,12 @@
+.contributors a {
+  border: 4px solid transparent;
+  display: inline-block;
+}
+
+.contributors a:hover {
+  border-color: #01a1cb;
+}
+
+.contributors img {
+  display: block;
+}

@@ -1,0 +1,27 @@
+.flash {
+  margin: 5px 0;
+  min-height: 2em;
+  padding: 1em;
+  line-height: 32px;
+  border-radius: 0.5em;
+  border: 1px;
+}
+
+.error {
+  color: #d8000c;
+  background-color: #ffbaba;
+}
+
+.info {
+  color: #00529b;
+  background-color: #bde5f8;
+}
+
+.valid {
+  color: #4f8a10;
+  background-color: #dff2bf;
+}
+.warning {
+  color: #9f6000;
+  background-color: #feefb3;
+}
