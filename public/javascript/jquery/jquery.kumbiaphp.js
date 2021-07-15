@@ -8,22 +8,22 @@
  *
  * Plugin para jQuery que incluye los callbacks basicos para los Helpers
  *
- * @copyright  Copyright (c) 2005 - 2019 KumbiaPHP Team (http://www.kumbiaphp.com)
+ * @copyright  Copyright (c) 2005 - 2021 KumbiaPHP Team (http://www.kumbiaphp.com)
  * @license    https://github.com/KumbiaPHP/KumbiaPHP/blob/master/LICENSE   New BSD License
  */
 
-(function($) {
+(function ($) {
 	/**
-	 * Objeto KumbiaPHP
+	 * Objeto Kumbia
 	 *
 	 */
-	$.KumbiaPHP = {
+	$.Kumbia = {
 		/**
 		 * Ruta al directorio public en el servidor
 		 *
 		 * @var String
 		 */
-		publicPath : null,
+		publicPath: null,
 
 		/**
 		 * Plugins cargados
@@ -37,9 +37,9 @@
 		 *
 		 * @param Object event
 		 */
-		cConfirm: function(event) {
-			var este=$(this);
-			if(!confirm(este.data('msg'))) {
+		cConfirm: function (event) {
+			let el = $(this);
+			if (!confirm(el.data("msg"))) {
 				event.preventDefault();
 			}
 		},
@@ -49,13 +49,13 @@
 		 *
 		 * @param String fx
 		 */
-		cFx: function(fx) {
-			return function(event) {
+		cFx: function (fx) {
+			return function (event) {
 				event.preventDefault();
-				var este=$(this),
-					rel = $('#'+este.data('to'));
+				let el = $(this),
+					rel = $("#" + el.data("to"));
 				rel[fx]();
-			}
+			};
 		},
 
 		/**
@@ -113,20 +113,26 @@
 		 *
 		 * @param Object event
 		 */
-		cUpdaterSelect: function(event) {
-            var $t = $(this),$u= $('#' + $t.data('update'))
-				url = $t.data('url');
-            $u.empty();
-            $.get(url, {'id':$t.val()}, function(d){
-				for(i in d){
-					var a = $('<option />').text(d[i]).val(i);
-					$u.append(a);
-				}
-			}, 'json');
+		cUpdaterSelect: function (event) {
+			let $t = $(this),
+				$u = $("#" + $t.data("update")),
+			    url = $t.data("url");
+			$u.empty();
+			$.get(
+				url,
+				{ id: $t.val() },
+				function (d) {
+					for (let i in d) {
+						let a = $("<option />").text(d[i]).val(i);
+						$u.append(a);
+					}
+				},
+				"json"
+			);
 		},
 
 		/**
-		 * Enlaza a las clases por defecto
+		 * Enlaza a los métodos por defecto
 		 *
 		 */
 		bind: function () {
@@ -161,99 +167,116 @@
 			$("body").on("change", "select.js-remote", this.cUpdaterSelect);
 
 			// Enlazar DatePicker
-			$.KumbiaPHP.bindDatePicker();
-			
+			$.Kumbia.bindDatePicker();
 		},
 
-        /**
-         * Implementa la autocarga de plugins, estos deben seguir
-         * una convención para que pueda funcionar correctamente
-         */
-        autoload: function(){
-            var elem = $("[class*='jp-']");
-            $.each(elem, function(i, val){
-                var este = $(this); //apunta al elemento con clase jp-*
-                var classes = este.attr('class').split(' ');
-                for (i in classes){
-                    if(classes[i].substr(0, 3) == 'jp-'){
-                        if($.inArray(classes[i].substr(3),$.KumbiaPHP.plugin) != -1)
-                            continue;
-                        $.KumbiaPHP.plugin.push(classes[i].substr(3))
-                    }
-                }
-            });
-            var head = $('head');
-            for(i in $.KumbiaPHP.plugin){
-                $.ajaxSetup({ cache: true});
-                head.append('<link href="' + $.KumbiaPHP.publicPath + 'css/' + $.KumbiaPHP.plugin[i] + '.css" type="text/css" rel="stylesheet"/>');
-				$.getScript($.KumbiaPHP.publicPath + 'javascript/jquery/jquery.' + $.KumbiaPHP.plugin[i] + '.js', function(data, text){});
-            }
+		/**
+		 * Implementa la autocarga de plugins, estos deben seguir
+		 * una convención para que pueda funcionar correctamente
+		 */
+		autoload: function () {
+			let elem = $("[class*='jp-']");
+			$.each(elem, function (i) {
+				let el = $(this); //apunta al elemento con clase jp-*
+				let classes = el.attr("class").split(" ");
+				for (i in classes) {
+					if (classes[i].substr(0, 3) == "jp-") {
+						if ($.inArray(classes[i].substr(3), $.Kumbia.plugin) != -1)
+							continue;
+						$.Kumbia.plugin.push(classes[i].substr(3));
+					}
+				}
+			});
+			let head = $("head");
+			for (let i in $.Kumbia.plugin) {
+				$.ajaxSetup({ cache: true });
+				head.append(
+					'<link href="' +
+					$.Kumbia.publicPath +
+					"css/" +
+					$.Kumbia.plugin[i] +
+					'.css" type="text/css" rel="stylesheet"/>'
+				);
+				$.getScript(
+					$.Kumbia.publicPath +
+					"javascript/jquery/jquery." +
+					$.Kumbia.plugin[i] +
+					".js",
+					function (data, text) { }
+				);
+			}
 		},
-		
+
 		/**
 		 * Carga y Enlaza Unobstrusive DatePicker en caso de ser necesario
 		 *
 		 */
-		bindDatePicker: function() {
-			
+		bindDatePicker: function () {
 			// Selecciona los campos input
-			var inputs = $('input.js-datepicker');
+			let inputs = $("input.js-datepicker");
 			/**
 			 * Funcion encargada de enlazar el DatePicker a los Input
 			 *
 			 */
-			var bindInputs = function() {
-				inputs.each(function() {
-					var opts = {monthSelector: true,yearSelector:true};
-					var input = $(this);
+			let bindInputs = function () {
+				inputs.each(function () {
+					let opts = { monthSelector: true, yearSelector: true };
+					let input = $(this);
 					// Verifica si hay mínimo
-					if(input.attr('min') != undefined) {
-						opts.dateMin = input.attr('min').split('-');
+					if (input.attr("min") != undefined) {
+						opts.dateMin = input.attr("min").split("-");
 					}
 					// Verifica si ha máximo
-					if(input.attr('max') != undefined) {
-						opts.dateMax = input.attr('max').split('-');
+					if (input.attr("max") != undefined) {
+						opts.dateMax = input.attr("max").split("-");
 					}
 
 					// Crea el calendario
 					input.pickadate(opts);
 				});
-			}
+			};
 
 			// Si ya esta cargado Unobstrusive DatePicker, lo integra de una vez
-			if(typeof($.pickadate) != "undefined") {
+			if (typeof $.pickadate != undefined) {
 				return bindInputs();
 			}
 
 			// Carga la hoja de estilos
-			$('head').append('<link href="' + this.publicPath + 'css/pickadate.css" type="text/css" rel="stylesheet"/>');
+			$("head").append(
+				'<link href="' +
+				this.publicPath +
+				'css/pickadate.css" rel="stylesheet">'
+			);
 
 			// Carga Unobstrusive DatePicker, para poder usar cache
-			jQuery.ajax({ dataType: "script",cache: true, url: this.publicPath + 'javascript/jquery/pickadate.js'}).done(function(){
-				bindInputs();
-			});
+			jQuery
+				.ajax({
+					dataType: 'script',
+					cache: true,
+					url: this.publicPath + 'javascript/jquery/pickadate.js',
+				})
+				.done(function () {
+					bindInputs();
+				});
 		},
 
 		/**
 		 * Inicializa el plugin
 		 *
 		 */
-		initialize: function() {
-			// Obtiene el publicPath, restando los caracteres que sobran
-			// de la ruta, respecto a la ruta de ubicacion del plugin de KumbiaPHP
-			// "javascript/jquery/jquery.kumbiaphp.js"
-			var src = $('script:last').attr('src');
-			this.publicPath = src.substr(0, src.length - 37);
+		initialize: function () {
+			// Obtiene el publicPath
+			let src = document.currentScript.src;
+			this.publicPath = src.slice(0, src.lastIndexOf('javascript/'));
 
-			// Enlaza a las clases por defecto
-			$(function(){
-				$.KumbiaPHP.bind();
-				$.KumbiaPHP.autoload();
-				
+			// Enlaza a los métodos por defecto
+			$(function () {
+				$.Kumbia.bind();
+				$.Kumbia.autoload();
 			});
-		}
-	}
+		},
+	};
 
 	// Inicializa el plugin
-	$.KumbiaPHP.initialize();
+	$.Kumbia.initialize();
 })(jQuery);
