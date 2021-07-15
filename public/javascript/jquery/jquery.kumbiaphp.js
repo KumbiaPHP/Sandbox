@@ -129,38 +129,38 @@
 		 * Enlaza a las clases por defecto
 		 *
 		 */
-		bind : function() {
-            // Enlace y boton con confirmacion
-            $("body").on('click', "a.js-confirm, input.js-confirm",this.cConfirm);
+		bind: function () {
+			// Enlace y boton con confirmacion
+			$("body").on("click", "a.js-confirm, input.js-confirm", this.cConfirm);
 
-            // Enlace ajax
-            $("body").on('click', "a.js-remote",this.cRemote);
+			// Enlace ajax
+			$("body").on("click", "a.js-remote", this.cRemote);
 
-            // Enlace ajax con confirmacion
-            $("body").on('click', "a.js-remote-confirm",this.cRemoteConfirm);
+			// Enlace ajax con confirmacion
+			$("body").on("click", "a.js-remote-confirm", this.cRemoteConfirm);
 
-            // Efecto show
-            $("body").on('click', "a.js-show",this.cFx('show'));
+			// Efecto show
+			$("body").on("click", ".js-show", this.cFx("show"));
 
-            // Efecto hide
-            $("body").on('click', "a.js-hide",this.cFx('hide'));
+			// Efecto hide
+			$("body").on("click", ".js-hide", this.cFx("hide"));
 
-            // Efecto toggle
-            $("body").on('click', "a.js-toggle",this.cFx('toggle'));
+			// Efecto toggle
+			$("body").on("click", ".js-toggle", this.cFx("toggle"));
 
-            // Efecto fadeIn
-            $("body").on('click', "a.js-fade-in",this.cFx('fadeIn'));
+			// Efecto fadeIn  @deprecated use CSS
+			$("body").on("click", ".js-fade-in", this.cFx("fadeIn"));
 
-            // Efecto fadeOut
-            $("body").on('click', "a.js-fade-out",this.cFx('fadeOut'));
+			// Efecto fadeOut @deprecated use CSS
+			$("body").on("click", ".js-fade-out", this.cFx("fadeOut"));
 
-            // Formulario ajax
-            $("body").on('submit',"form.js-remote", this.cFRemote);
+			// Formulario ajax
+			$("body").on("submit", "form.js-remote", this.cFRemote);
 
-            // Lista desplegable que actualiza con ajax
-            $("body").on('change',"select.js-remote", this.cUpdaterSelect);
+			// Lista desplegable que actualiza con ajax
+			$("body").on("change", "select.js-remote", this.cUpdaterSelect);
 
-            // Enlazar DatePicker
+			// Enlazar DatePicker
 			$.KumbiaPHP.bindDatePicker();
 			
 		},
