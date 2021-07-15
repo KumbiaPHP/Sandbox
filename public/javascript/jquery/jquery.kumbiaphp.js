@@ -86,19 +86,19 @@
 		 * Enviar formularios de manera asincronica, via POST
 		 * Y los carga en un contenedor
 		 */
-		cFRemote: function(event){
+		cFRemote: function (event) {
 			event.preventDefault();
-			este = $(this);
-			var button = $('[type=submit]', este);
-			button.attr('disabled', 'disabled');
-			var url = este.attr('action');
-			var div = este.attr('data-to');
-			$.post(url, este.serialize(), function(data, status){
-				var capa = $('#'+div);
-				capa.html(data);
+			let el = $(this);
+			let button = $("[type=submit]", el);
+			button.attr("disabled", "disabled");
+			let url = el.attr("action");
+			let div = el.attr("data-to");
+			$.post(url, el.serialize(), function (data, status) {
+				let capa = $("#" + div);
 				capa.hide();
-				capa.show('slow');
-				button.attr('disabled', null);
+				capa.html(data);
+				capa.show("fast");
+				button.attr("disabled", null);
 			});
 		},
 
