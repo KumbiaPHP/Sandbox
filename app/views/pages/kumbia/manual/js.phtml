@@ -39,6 +39,9 @@
         <header>
             <h2>form.js-remote</h2>
             <form action="/pages/kumbia/manual/sociable" class="js-remote" data-to="load-content-remote-3" method="post">
+                <label>Nombre:
+                    <input id="name" type="text" value="John" required>
+                </label>
                 <button type="submit"><?= _('Ajax form') ?></button>
             </form>
             <div id="load-content-remote-3"></div>
@@ -52,7 +55,7 @@
     </article>
     <article>
         <header>
-            <h2>a.js-show</h2>
+            <h2>.js-show</h2>
             <a class="js-show" data-to="green-container" role="button" href=""><?=_('Show green container')?></a>
             <div id="green-container" style="width: 200px; height: 100px; margin: 20px 0px 0px; background: green; display: none;"></div>
         </header>
@@ -63,7 +66,7 @@
     </article>
     <article>
         <header>
-            <h2>a.js-hide</h2>
+            <h2>.js-hide</h2>
             <a class="js-hide" data-to="blue-container" role="button" href=""><?=_('Hide blue container')?></a>
             <div id="blue-container" style="width: 200px; height: 100px; margin: 20px 0px 0px; background: blue;"></div>
         </header>
@@ -74,18 +77,18 @@
     </article>
     <article>
         <header>
-            <h2>a.js-toggle</h2>
-            <a class="js-toggle" data-to="red-container" role="button" href=""><?=_('Toggle red container')?></a>
+            <h2>.js-toggle</h2>
+            <button class="js-toggle" data-to="red-container"><?=_('Toggle red container')?></button>
             <div id="red-container" style="width: 200px; height: 100px; margin: 20px 0px 0px; background: red; display: none;"></div>
         </header>
         <pre class="language-php">
-            <code class="language-php"><?= h('<a class="js-toggle" data-to="red-container" href=""><?=_(\'Toggle red container\')?></a>
+            <code class="language-php"><?= h('<button class="js-toggle" data-to="red-container"><?=_(\'Toggle red container\')?></button>
 <div id="red-container" style="width: 200px; height: 100px; margin: 20px 0px 0px; background: red; display: none;"></div>') ?></code>
         </pre>
     </article>
     <article>
         <header>
-            <h2>a.js-fade-in</h2>
+            <h2>.js-fade-in</h2>
             <a class="js-fade-in" data-to="yellow-container" role="button" href=""><?=_('Fade-in yellow container')?></a>
             <div id="yellow-container" style="width: 200px; height: 100px; margin: 20px 0px 0px; background: yellow; display: none;"></div>
         </header>
@@ -96,7 +99,7 @@
     </article>
     <article>
         <header>
-            <h2>a.js-fade-out</h2>
+            <h2>.js-fade-out</h2>
             <a class="js-fade-out" data-to="black-container" role="button" href=""><?=_('Fade-out black container')?></a>
             <div id="black-container" style="width: 200px; height: 100px; margin: 20px 0px 0px; background: black;"></div>
         </header>
