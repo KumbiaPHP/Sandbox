@@ -38,9 +38,9 @@
     <article>
         <header>
             <h2>form.js-remote</h2>
-            <form action="/pages/kumbia/manual/sociable" class="js-remote" data-to="load-content-remote-3" method="post">
+            <form action="/ajax/hola" class="js-remote" data-to="load-content-remote-3" method="post">
                 <label>Nombre:
-                    <input id="name" type="text" value="John" required>
+                    <input id="name" name="name" type="text" value="John" required>
                 </label>
                 <button type="submit"><?= _('Ajax form') ?></button>
             </form>
