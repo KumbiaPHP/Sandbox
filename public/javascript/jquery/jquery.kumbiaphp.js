@@ -63,10 +63,13 @@
 		 *
 		 * @param Object event
 		 */
-		cRemote: function(event) {
-			var este=$(this), rel = $('#'+este.data('to'));
+		cRemote: function (event) {
+			let el = $(this),
+				rel = $("#" + el.data("to"));
 			event.preventDefault();
+			rel.hide();
 			rel.load(this.href);
+			rel.show('fast');
 		},
 
 		/**
@@ -74,11 +77,14 @@
 		 *
 		 * @param Object event
 		 */
-		cRemoteConfirm: function(event) {
-			var este=$(this), rel = $('#'+este.data('to'));
+		cRemoteConfirm: function (event) {
+			let el = $(this),
+				rel = $("#" + el.data("to"));
 			event.preventDefault();
-			if(confirm(este.data('msg'))) {
+			if (confirm(el.data("msg"))) {
+				rel.hide();
 				rel.load(this.href);
+				rel.show('fast');
 			}
 		},
 
