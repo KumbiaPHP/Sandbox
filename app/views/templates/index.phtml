@@ -2,17 +2,25 @@
         <h1>Templates</h1>
         <p>Using KumbiaPHP templates</p>
 </header>
-<div class="row container">
+<div class="container">
     <aside>
         <h2>KumbiaPHP Templates</h2>
-        <ul>
-            <li><a href="/templates/get/csv" target="_blank">CSV Template</a></li>
-            <li><a href="/templates/get/xml" target="_blank">XML Template</a></li>
-            <li><a href="/templates/get/json" target="_blank">JSON Template</a></li>
-        </ul>
+        <pre class="language-php">
+            <code class="language-php"><?= h('// Any method in the controller
+public function users()
+{
+    $this->data = User::all(); // Send any object, array or array of objects to $this->data
+    View::select(null, "xml"); // Use any of xml, json or csv. That\'s all!
+}'
+) ?></code>
+        </pre>
     </aside>
-    <div class="eight columns">
-        <h2>Template by default: HTML</h2>
+    <article>
+        <h2>View this table in 
+            <a href="/templates/get/json" role="button" target="_blank" data-tooltip="JSON Template">JSON</a>
+            <a href="/templates/get/xml" role="button" target="_blank" data-tooltip="XML Template">XML</a>
+            <a href="/templates/get/csv" role="button" target="_blank" data-tooltip="CSV Template">CSV</a>
+        </h2>
         <?php if (!count($data)) : ?>
             <h2>There are no records</h2>
         <?php else : ?>
@@ -40,5 +48,7 @@
             </table>
             </figure>
         <?php endif ?>
-    </div>
+    </article>
 </div>
+<?= Tag::js('prism') ?>
+<?php Css::add('prism') ?> 
