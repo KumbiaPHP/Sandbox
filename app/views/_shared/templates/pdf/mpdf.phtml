@@ -33,7 +33,7 @@ ob_start();
 <body>
     <htmlpageheader name="myHeader1">
         <section id="page-header">
-            <a href="https://www.kumbiaphp.com"><img src="img/kumbiaphp.svg" alt="Logo KumbiaPHP"></a>
+            <a href="https://kumbiaphp.com"><img src="img/kumbiaphp.svg" alt="Logo KumbiaPHP"></a>
             <p>Powered by</p>
         </section>
     </htmlpageheader>
@@ -57,7 +57,7 @@ ob_clean();
 $mpdf = new Mpdf([
     'tempDir' => APP_PATH . 'temp/mpdf',
     'format' => 'A4',
-    'title2annots' => true,  // convert title in annotations
+    'title2annots' => true,  // convert headers in annotations
     'mirrorMargins' => 0,    // mirror the left and right margin values on odd and even pages 
     'exposeVersion' => false // security 
     // more variables in https://mpdf.github.io/reference/mpdf-variables/overview.html
