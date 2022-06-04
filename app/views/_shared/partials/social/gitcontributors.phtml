@@ -6,5 +6,5 @@
   $team = json_decode(file_get_contents($url));
   foreach ($team as $user) :?>
    <a href="https://github.com/<?= $user->login?>" data-tooltip="@<?= $user->login, ' ', $user->contributions, ' contribuciones'?>">
-   <img src="<?= $user->avatar_url ?>&s=60" width=60 height=60 alt="@<?= $user->login?>"></a>
+   <img src="<?= $user->avatar_url ?>&s=60" width=60 height=60 loading="lazy" alt="@<?= $user->login?>"></a>
   <?php endforeach ?> 
