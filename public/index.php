@@ -96,7 +96,8 @@ $url = $_SERVER['PATH_INFO'] ?? '/';
  */
  //$url = isset($_GET['_url']) ? $_GET['_url'] : '/';
 
-require '../vendor/autoload.php';
+// Si usas globalmente libs con composer, en nuestro caso solo lo usamos en un view
+//require '../vendor/autoload.php';
 
 /**
  * Carga el gestor de arranque
