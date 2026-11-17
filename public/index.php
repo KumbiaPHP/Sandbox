@@ -97,6 +97,7 @@ $url = $_SERVER['PATH_INFO'] ?? '/';
  //$url = isset($_GET['_url']) ? $_GET['_url'] : '/';
 
 // Si usas globalmente libs con composer, en nuestro caso solo lo usamos en un view
+// Usarlo aqui globalmente, tiene implicaciones de tiempo y memoria para cada requests
 //require '../vendor/autoload.php';
 
 /**
